@@ -3,17 +3,19 @@
 
 from numpy import *
 import fds
+import sys
 from matplotlib.pyplot import *
 rcParams.update({'axes.labelsize':'large'})
 rcParams.update({'xtick.labelsize':'large'})
 rcParams.update({'ytick.labelsize':'large'})
 rcParams.update({'legend.fontsize':'large'})
 
-start_seg = 2 # we look at only segments 5,6,7,8,...
-N_homo = 20
+case = sys.argv[1]
+N_homo = int(sys.argv[2])
+start_seg = int(sys.argv[3]) # we look at only segments 5,6,7,8,...
 
 # compute djds v.s. # segment
-cp = fds.checkpoint.load_last_checkpoint('/home/talnikar/adFVM/cases/3d_cylinder/gpu/checkpoint/', N_homo)
+cp = fds.checkpoint.load_last_checkpoint(case, N_homo)
 #K = size(cp.g_dil)
 #c = zeros([K, N_objectives])
 #for i in range(0, K):
