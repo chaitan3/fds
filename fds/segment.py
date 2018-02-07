@@ -2,7 +2,8 @@ from __future__ import division
 import os
 import numpy as np
 import pascal_lite as pascal
-from multiprocessing import Pool
+from serial_pool import Pool
+#from multiprocessing import Pool
 
 from .compute import run_compute
 

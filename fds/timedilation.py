@@ -1,7 +1,8 @@
 from __future__ import division
 import sys
 import numpy as np
-from multiprocessing import Pool
+from serial_pool import Pool
+#from multiprocessing import Pool
 from pdb import set_trace
 
 from .state import state_dot, state_outer, state_norm
