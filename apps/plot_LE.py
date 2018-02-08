@@ -104,3 +104,5 @@ xlabel('n-th largest Lyapunov exponent')
 ylabel('value of Lyapunov exponent')
 savefig('LE_err.png')
 close(fig)
+
+print 'LE check \delta T \le ', 1./(LE[I][0] - LE[I][-1])
